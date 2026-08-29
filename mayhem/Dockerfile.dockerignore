@@ -1,0 +1,6 @@
+# Prune the build context (BuildKit prefers this over a root .dockerignore for -f mayhem/Dockerfile).
+# .git is deliberately kept: the Dockerfile copies the full repo, history included, into /mayhem.
+build/
+**/build/
+**/*.o
+ctrf-report.json
