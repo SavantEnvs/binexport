@@ -1,0 +1,8 @@
+project: savantenvs/binexport
+target: binexport2_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/binexport2_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/binexport2_fuzzer
+    libfuzzer: true
