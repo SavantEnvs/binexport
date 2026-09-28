@@ -802,7 +802,7 @@ public class BinExport2Builder {
         flowGraph.addBasicBlockIndex(id);
 
         long bbLastInstrAddress =
-            getMappedAddress(listing.getInstructionBefore(bb.getMaxAddress()));
+            getMappedAddress(listing.getInstructionContaining(bb.getMaxAddress()));
         var edges = new ArrayList<BinExport2.FlowGraph.Edge>();
         var lastFlow = RefType.INVALID;
         for (var bbDestIter = bb.getDestinations(monitor); bbDestIter.hasNext(); ) {
